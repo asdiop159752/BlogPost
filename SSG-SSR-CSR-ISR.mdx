@@ -6,7 +6,7 @@ tags: ['next.js','nextjs','stuff']
 
 
 ## Overview of SSR (in static context)
-<CustomImage src="https://raw.githubusercontent.com/gitdagray/test-blogposts/main/images/NextLevel1.png" alt="Warning: Next Level Ahead" />
+![SSR](https://aboutmonica.com/media/ssr-hydration/hydration-steps-with-link.png)
 > Giải thích ảnh trên
 > Ban đầu mình viết code bằng React sau khi viết xong mình sẽ build ở dạng production và mình build theo dạng ReactDOMServer để nó build ra những file HTML. Ở ảnh 3 User gửi Request lên thì mình sẽ trả file HTML đó về , vì file HTML nó đã được render sẵn layout tất cả mọi thứ rồi. Tuy nhiên , nó **chỉ mới là phần content** và **chưa có event** . Sau khi user nó đẫ load file HTML lên rồi thì nó sẽ load JavaScript nữa . Thì nó sẽ thực hiện 1 quá trình nó gọi là **hydrate()** thì nó sẽ dùng **ReactDOM.hydrate()** để attach(gắn) thêm cái event listener lên cái markup để được render phía server.
 
@@ -25,8 +25,7 @@ Same as render(), but is used to hydrate a container whose HTML contents were re
 > 3. ISR - Incremental Static Regeneration
 ## 1. Pre-rendering (SSR)
 ### Sự khác nhau Pre-rendering(NextJs) - No Pre-rendering(React)
-<CustomImage src="https://raw.githubusercontent.com/gitdagray/test-blogposts/main/images/NextLevel1.png" alt="Warning: Next Level Ahead" />
-
+![Pre-rendering and No Pre-rendering(SSR)](https://images.viblo.asia/be129f53-a445-4a43-89a9-43310f3bf08d.png)
 #### Pre-rendering(Using Next.js)
 
 **Pre-rendering** mình sẽ render sẵn file HTMl ở phía server khi user nó load nên mình có sẵn đầy đủ mọi thứ thông tin nó show lên rồi sau đó nó sẽ load thêm file JavaScript và khi đó nó thực hiện quá trình Hydration
