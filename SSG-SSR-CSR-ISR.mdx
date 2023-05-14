@@ -26,7 +26,7 @@ Same as render(), but is used to hydrate a container whose HTML contents were re
 > 3. ISR - Incremental Static Regeneration
 ## 1. Pre-rendering (SSR)
 ### Sự khác nhau Pre-rendering(NextJs) - No Pre-rendering(React)
-<CustomImage src="https://raw.githubusercontent.com/asdiop159752/BlogPost/master/images/Pre-rendering and No Pre-rendering(SSR).webp" alt="Warning: Pre-rendering and No Pre-rendering(SSR)" />
+<CustomImage src="https://raw.githubusercontent.com/asdiop159752/BlogPost/master/images/Pre-rendering-and-No-Pre-rendering(SSR).webp" alt="Warning: Pre-rendering and No Pre-rendering(SSR)" />
 
 #### Pre-rendering(Using Next.js)
 
@@ -41,7 +41,7 @@ Same as render(), but is used to hydrate a container whose HTML contents were re
 
 ## 2. Pre-rendering(SSG) (Build-time)
 ### (SSG) Static Site Generation( khá là xịn và nó cũng được khuyến khích sử dụng default bởi nextjs .Cứ render mặc định là SSG).Và những trường hợp sử dụng Server side rendering(SSR) khá là ít
-![SSG - Static Site Generation](https://images.viblo.asia/ca8dfffb-65fe-4e02-bd82-aa194736717e.png)
+<CustomImage src="https://raw.githubusercontent.com/asdiop159752/BlogPost/master/images/SSG-Static-Site-Generation.webp" alt="Warning: SSG - Static Site Generation" />
 #### [SSR Generation :](https://nextjs.org/learn/basics/data-fetching/two-forms)
 
 **Đây là trong giai đoạn (build-time là trong thời điểm mình gõ lệnh yarn build) và sau đó nó sẽ gọi thằng (next-build)**
@@ -55,7 +55,7 @@ Same as render(), but is used to hydrate a container whose HTML contents were re
 ## 3. SSR - Server Side Rendering (Run-time)
 ### Per-request(Mỗi yêu cầu)
 #### Và đây còn được gọi là run time (run-time là khi chúng ra gõ lện yarn run)
-![SSR](https://nextjs.org/static/images/learn/data-fetching/server-side-rendering.png)
+<CustomImage src="https://raw.githubusercontent.com/asdiop159752/BlogPost/master/images/SSR.png" alt="Warning: SSR" />
 * Mỗi user gửi request lên rồi nó sẽ xử lý gom dữ liệu, lấy dữ liệu gì đó sau đó mới tạo ra file HTML rồi mới trả lại cho user bước này cứ mỗi lần request lên thì mình phải đi xử lý và tạo ra file HTML .Điều này nếu như mình có nhiều request gửi lên giống như vậy thì server mình sẽ làm việc rất là cực. 
 * Nhưng đối với thằng Static side mình build xong ra một file HTML rồi thì ông nào cần query(hỏi) thì trả về rất là nhanh ko cần phải tính toán gì query lên CDN nó trả về. 
 * Nhưng đối với Server side rendering mình phải đợi cái việc tính toán bên phía server nữa rồi server phải xử lý thì nó sẽ tốn cái resort trên cái server của mình và tùy thuộc vào server của mình tính toán nhanh hay chậm thì nó sẽ ảnh hưởng tới việc user nó sẽ đợi nhanh hay chậm để lấy cái file HTML trả về. 
