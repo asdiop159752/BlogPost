@@ -68,7 +68,8 @@ Same as render(), but is used to hydrate a container whose HTML contents were re
 
 `Làm kiểu này tiện cái markup của mình vẫn generate sẵn và vẫn 1 static side sẵn và cái phần dynamic mà cần phải có data thì mình đợi về phía client mình show cái loading và mình fetch data về mình show lên là xong vừa kết hợp sự thuận lời ả 2 bên`
 
-![CSR](https://nextjs.org/static/images/learn/data-fetching/client-side-rendering.png)
+<CustomImage src="https://raw.githubusercontent.com/asdiop159752/BlogPost/master/images/CSR.png" alt="Warning: CSR" />
+
 #### Tạo những file markup sẵn còn phần dữ liệu mình ko cần Fetch trên phía server mà đợi load về phía client rồi nó show được cái markup rồi sau đó mình có thể đi Fetch dữ liệu rồi sau đó mới show phần dữ liệu liệu cuối **3 màu vàng xanh hông** như trong ảnh lên
 [CSR : ](https://nextjs.org/learn/basics/data-fetching/request-time)
 
@@ -81,21 +82,24 @@ Nếu không cần kết xuất trước dữ liệu, bạn cũng có thể sử
 `Nếu mình mà dùng SSG thì nó sẽ không hợp lý , lý do: có 1 triệu sản phẩm mà lúc build tạo ra 1 triêu trang HTML thì nó sẽ tốn hằng giờ đồng hồ. `
 
 ` Nếu mà sử dụng SSR thì ko lẽ 1 triệu thằng user nó query cùng một trang đấy thì server phải chạy 1 triệu lần thì nó rất là ác mộng  server mình xử lý rất cực hình vì cứ rất nhiều product thì mỗi lần nó gửi lên phải query database rồi trả nó về `
-![ISR](https://external-preview.redd.it/7QrReZKQakhoTe8tTfHqg9BglAtJZJ1H4p-EfNOdUd8.jpg?auto=webp&s=5ae5b6176a77103f6b9da5ea77cf94fd9fda641d)
+<CustomImage src="https://raw.githubusercontent.com/asdiop159752/BlogPost/master/images/ISR.webp" alt="Warning: ISR" />
 
 * Vì thế nó mới sinh ra thằng ISR tức là mình có 1 triệu sản phẩm nhưng đâu đó tôi chỉ có 1 nghàn sản phẩm phổ biến như vậy tui chỉ build 1000 phẩm tui build 1000 sản phẩm đó ra dạng Static Generation tui build ra sẵn tui sẽ query 1000 sản phẩm phổ biến đó và build ra sẵn 1000file HTML như vậy ông nào ổng nào ổng query lên thì có sẵn file HTML trả về cứ ông nào query lên có file HTML trả về rất là nhanh. 
 
 Nếu như 1 ông mà query sản phẩm mà chưa có query nếu mà chưa có mình sẽ tạo ra 1 cái file generation file HTML mới để mình trả về cho user và những thằng sau mà nó lại query lại sẵn cái file HTML đó vì mình đã generation sẵn hồi nảy rồi mình lấy mình tái sử dụng thôi như vậy cứ thằng user request thêm thì chỉ có thằng đầu tiên nó phải đợi chút xíu để mình đi generation ra file HTML để mình trả về còn những thằng sau thì nó rất là nhanh hầu như là lập tức.
 
 * Bản chất của ISR thì nó vẫn dựa trên cái **Static side generation** nhưng nó sẽ kết hợp thêm 1 **option** đó là **revalidate: 60** 
-![ISR](https://archive.smashing.media/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/a9d6ec1f-b714-4102-b845-0986bfc65417/regeneration-regeneration-nextjs.png)
+<CustomImage src="https://raw.githubusercontent.com/asdiop159752/BlogPost/master/images/ISR-revalidate.png" alt="Warning: ISR Revalidate" />
+
 
 ## 6. Một cái hay của Next JS là mỗi trang mình có thể dùng 1 hình thức pre-rendering khác nhau Static side Generation và kết hợp Server-side Rendering
 ` VD: Tôi có trang Home tôi muốn sử dụng SSG  nhưng tôi muốn trang About sử dụng SSR vẫn ok hết `
-![Per-pageBasic](https://nextjs.org/static/images/learn/data-fetching/per-page-basis.png)
+<CustomImage src="https://raw.githubusercontent.com/asdiop159752/BlogPost/master/images/Per-pageBasic.png" alt="Warning: Per-pageBasic" />
+
 
 Nó sẽ phụ thuộc vào sự phụ thuộc vào của 1 số hàm đặc biệt
-![ISR-SSG-SSR](https://images.viblo.asia/eed7a1d5-4ff2-4d75-a8a2-10717550c76c.png)
+<CustomImage src="https://raw.githubusercontent.com/asdiop159752/BlogPost/master/images/ISR-SSG-SSR.webp" alt="Warning: ISR-SSG-SSR" />
+
 
 Nếu `sử dụng` **getServerSideProps** thì nó sẽ là dạng **Server Side Rendering (SSR)**
 
