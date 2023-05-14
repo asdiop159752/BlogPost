@@ -5,7 +5,7 @@ tags: ['next.js','nextjs','stuff']
 ---
 
 ## Overview of SSR (in static context)
-<CustomImage src="https://aboutmonica.com/media/ssr-hydration/hydration-steps-with-link.png" alt="SSR">
+<CustomImage src="https://aboutmonica.com/media/ssr-hydration/hydration-steps-with-link.png" alt="Warning: SSR">
 > Giải thích ảnh trên
 > Ban đầu mình viết code bằng React sau khi viết xong mình sẽ build ở dạng production và mình build theo dạng ReactDOMServer để nó build ra những file HTML. Ở ảnh 3 User gửi Request lên thì mình sẽ trả file HTML đó về , vì file HTML nó đã được render sẵn layout tất cả mọi thứ rồi. Tuy nhiên , nó **chỉ mới là phần content** và **chưa có event** . Sau khi user nó đẫ load file HTML lên rồi thì nó sẽ load JavaScript nữa . Thì nó sẽ thực hiện 1 quá trình nó gọi là **hydrate()** thì nó sẽ dùng **ReactDOM.hydrate()** để attach(gắn) thêm cái event listener lên cái markup để được render phía server.
 
