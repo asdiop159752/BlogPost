@@ -1,0 +1,65 @@
+---
+title: 'Authentication vs Authorization and  Cookie vs Token Authentication and  JSON Web Token'
+date: '2023-05-16'
+tags: ['next.js','nextjs','new']
+---
+# Authentication vs Authorization🎉
+<CustomImage src="https://raw.githubusercontent.com/asdiop159752/BlogPost/master/images/Authentication-Authorization.jpg" alt="Warning:Authentication-Authorization" />
+
+## Authentication
+`Xác định bạn có phải là user của hệ thống không? Nếu phải thì bạn là ai?`
+
+> Có thể sử dụng một hoặc nhiều phương thức khác nhau để xác thực người dùng, tuỳ vào mức độ bảo mật của
+> hệ thống.
+> Username + password
+> Vân tay
+> Nhận diện gương mặt
+> Social network
+> OTP
+> PIN
+> Two-factor authentication (2FA)
+> Multi-factor authentication (MFA)
+...
+
+## Cơ chế Authorization🎉
+`Nếu đã là user của hệ thống, vậy bạn có những quyền gì trên hệ thống?`
+
+Một trong những cách phổ biến nhất hiện nay là sử dụng JWT (JSON Web Token).
+
+Tóm tắt 
+
+<CustomImage src="https://raw.githubusercontent.com/asdiop159752/BlogPost/master/images/SumaryAuthentication-Authorization.png" alt="Warning:SumaryAuthentication-Authorization" />
+
+# Cookie vs Token Authentication
+<CustomImage src="https://raw.githubusercontent.com/asdiop159752/BlogPost/master/images/CookievsToken-Authentication.png" alt="Warning: CookievsToken Authentication" />
+
+
+<CustomImage src="https://raw.githubusercontent.com/asdiop159752/BlogPost/master/images/SumaryCookievsToken-Authentication.png" alt="Warning: SumaryCookievsToken-Authentication" />
+
+# Những điều cần biết về JWT 🎉
+
+## 1. JWT - JSON Web Token
+
+> Mã thông báo web JSON (JWT) là một tiêu chuẩn mở (RFC 7519) xác định một cách nhỏ gọn và khép kín để truyền thông tin an toàn giữa các bên dưới dạng đối tượng JSON. Thông tin này có thể được xác minh và tin cậy vì nó được ký điện tử. JWT có thể được ký bằng bí mật (với thuật toán HMAC) hoặc cặp khóa công khai/riêng tư bằng RSA hoặc ECDSA.
+
+* Dùng để truyền thông tin một cách an toàn.
+* Có phần chữ ký nên đảm bảo dữ liệu không bị thay đổi, chỉnh sửa trên đường đi.
+
+<CustomImage src="https://raw.githubusercontent.com/asdiop159752/BlogPost/master/images/JSON-Web-Token.png" alt="Warning: JSON-Web-Token" />
+
+## 2. Cấu trúc của một JWT bao gồm cái gì?
+
+<CustomImage src="https://raw.githubusercontent.com/asdiop159752/BlogPost/master/images/Cấu_trúc_của_một_JWT.png" alt="Warning: Cấu_trúc_của_một_JWT" />
+
+## 3. JWT được sử dụng như thế nào?
+
+<CustomImage src="https://raw.githubusercontent.com/asdiop159752/BlogPost/master/images/How_to_use_JWT.png" alt="Warning: How_to_use_JWT" />
+
+
+
+
+
+
+
+
+
