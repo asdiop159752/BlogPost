@@ -12,9 +12,9 @@ tags: ['next.js','nextjs','ssg','news']
 # Windows Subsystem for Linux
 ## 2 câu lệnh được sử dụng trong bài học này:
 ```ts
-sudo apt update
+sudo apt 'update'
 và
-sudo apt upgrade
+sudo apt 'upgrade'
 ```
 ## Lệnh apt-get update
 Lệnh sudo apt-get update được sử dụng để tải xuống thông tin gói từ tất cả các nguồn được cấu hình.
@@ -26,15 +26,15 @@ Vì vậy, khi bạn chạy lệnh cập nhật, nó sẽ tải xuống thông t
 Cách xem tệp /etc/apt/sources.list, gõ lệnh cat:
 
 ```ts
-cat /etc/apt/sources.list
+'cat' /etc/apt/sources.list
 ```
 Chạy lệnh sudo apt-get update để cập nhật package index
 
 Chỉ cần gõ lệnh apt-get hoặc lệnh apt:
 ```ts
-sudo apt update
+'sudo apt' update
 # hoặc
-sudo apt-get update
+'sudo apt-get' update
 ```
 ## Lệnh apt-get upgrade
 Bây giờ bạn đã biết lệnh sudo apt-get update giúp bạn có một danh sách cập nhật các gói từ Internet.
@@ -60,9 +60,9 @@ PPA của bạn và đảm bảo rằng nó được cập nhật. Trong khi “
 Do đó, tùy chọn được khuyến nghị là luôn chạy lệnh update trước lệnh upgrade để cập nhật các gói đã cài đặt cho hệ 
 thống Ubuntu hoặc Debian:
 ```ts
-sudo apt-get update && sudo apt-get upgrade
+'sudo apt-get' update && 'sudo apt-get' upgrade
 ```
 Chúng ta có thể chạy nhiều lệnh trong sudo như sau:
 ```ts
-sudo sh -c 'apt update && apt upgrade'
+'sudo sh' -c ''apt update && apt upgrade''
 ```
