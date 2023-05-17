@@ -68,68 +68,262 @@ Chúng ta có thể chạy nhiều lệnh trong sudo như sau:
 ```
 
 # Lệnh Linux cơ bản 
-* 'ls' show list file
+* 'ls' : show list file
 
-* 'ls-l' show list detail
+* 'ls-l' : show list detail
 
-* 'ls-a' show list hide
+* 'ls-a' : show list hide
 
-* 'ls-la' show list hide detail
+* 'ls-la' : show list hide detail
 
-* 'ls-R' show all file small in file big
+* 'ls-R' : show all file small in file big
 
-* 'ls' `folder-large`/`folder-small` show folder small
+* 'ls' `folder-large`/`folder-small` : show folder small
 
-* 'cd' đi vào trong 1 thư mục
+* 'cd' : đi vào trong 1 thư mục
 
-* 'cd ..' lùi về 1 thư mục
+* 'cd ..' : lùi về 1 thư mục
 
 * 'cd ../../' lùi về 2 thư mục
 
-* 'clear' clear terminar
+* 'clear' : clear terminar
 
-* 'mkdir' `name forder`  create new folder
+* 'mkdir' `name forder` : create new folder
 
-* 'mkdir' `folder name` `folder name` `folder name` -p create new folder and children
+* 'mkdir' `folder name` `folder name` `folder name` -p : create new folder and children
 
-* 'rmdir' `name forder`  remove folder
+* 'rmdir' `name forder`  : remove folder
 
-* 'rm - r'  `folder-option` remove folder option and children
+* 'rm - r'  `folder-option` : remove folder option and children
 
-* 'touch' create file
+* 'touch' : create file
 
-* 'touch' `folder-larfe`/`folder-small`/`add file`  add file in children
+* 'touch' `folder-larfe`/`folder-small`/`add file` :  add file in children
 
 
 ---
 ###  vi viết tắt của vim 
-* 'vi' nó sẽ truy cập vào vim
+* 'vi' : nó sẽ truy cập vào vim
 
-* ':q' out vim
+* ':q' : out vim
 
-* 'vi `file name`' create file in vim
+* 'vi `file name`' : create file in vim
 
-* 'i' chỉ cần bấm i trên bàn phím nó sẽ vào ** INSERT ** và có thể nhập vào vì dụ tạo file index.html và bấm i để thêm thẻ 
+* 'i' : chỉ cần bấm i trên bàn phím nó sẽ vào ** INSERT ** và có thể nhập vào vì dụ tạo file index.html và bấm i để thêm thẻ 
 ```c 
 <h1> Hello Vim </h1> 
 ```
 và muốn edit lại thì đưa con trỏ chuột đến noi cần edit và bấm 'i' và cuối cùng muốn thoát khỏi ** mode Inset ** thì đè nút 'esc' để thoát ra 
 
-* ':q!' nó thoát và nó không lưu file
+* ':q!' : nó thoát và nó không lưu file
 
-* ':w' nó sẽ lưu lại file 
+* ':w' : nó sẽ lưu lại file 
 
-* ':wq' vừa lưu lại file và vừa thoát file
+* ':wq' : vừa lưu lại file và vừa thoát file
 
-* ':x' vừa lưu lại file và vừa thoát file
+* ':x' :  vừa lưu lại file và vừa thoát file
 
-* 'vi' `file name` nếu file này đã có thì vẫn bấm giống như create để vào trong file đó
+* 'vi' `file name` : nếu file này đã có thì vẫn bấm giống như create để vào trong file đó
 
 [Docs Vim](https://itplusx.info/su-dung-vim-co-ban-toi-nang-cao/)
 
 ---
 
 ### cat viết tắt của từ concatenate 
-* 'cat' `file name` Xem nội dung bên trong
+#### Dùng để xem nội dung bên trong 
+* 'cat' `file name` : Xem nội dung bên trong
 
-* 'cat' `file name` `file name` Xem nội dung bên trong nhưng của 2 file
+* 'cat' `file name` `file name` : Xem nội dung bên trong nhưng của 2 file
+
+* 'cat' `file name` `file name` '>' `file new` : Nó sẽ nhóm 2 thằng file name thành file new
+
+* 'cat' `file new` : gọi file new nó sẽ show ra
+
+[Docs cat](https://www.hostinger.vn/huong-dan/linux-cat-command-cach-dung-va-vi-du-cu-the)
+
+### Lệnh echo 
+#### Thường dùng để in ra trực tiếp hoặc in vào HTML
+* 'echo' `Hello` : nó sẽ in ra Hello 
+
+* 'echo' `"Hello world"` : nếu ghi nhiều chữ phải có ngoặc "" nó sẽ in ra Hello world
+
+* 'echo'  `"<h2> Hello world </h2>"` '>' echo.html : nó sẽ in thẻ h2 và trong file echo.html
+
+* 'echo'  `"<h2> Hello world </h2>"` '>>' echo.html : nó sẽ in thẻ h2 và trong file echo.html nhưng khi sử dung >> nó sẽ ghi thêm
+** 'cat' `echo.html` : để xem file đã tạo ở trên
+
+[Docs echo](https://quantrimang.com/cong-nghe/cach-su-dung-lenh-echo-trong-linux-166943)
+
+### Lệnh tail 
+#### mặc định nó chỉ lấy ra 10 nội dung cuối cùng
+
+* 'tail' `file name` : nó sẽ show ra 10 thằng cuối
+
+* 'tail -n 5' `file name`  : nó sẽ cho coi 5 thằng cuối cùng
+
+* 'tail --help' : giải thích phần có thể xài 
+
+* 'tail -f' `file name` : nó sẽ theo dõi vd: bạn phải nhấc lên trên tab và chuột phải vào tab rồi chọn ** split Tab ** sau đó sẽ có 2 màn hình và
+có thể tạo 'echo "Hi anh em" >> `file name`' bên màn hình mới sáu đó nó sẽ hiện chữ "hi anh em " bên màn hình 1 và cách tắt màn hình thứ 2 'ctrl + shift + '''
+
+[Docs tail](https://quantrimang.com/cong-nghe/lenh-tail-trong-linux-178005)
+
+### Lệnh grep
+#### thường dung để lọc tìm kiếm 1 từ 
+
+* 'cat' `file name` '| grep' `nội dung muốn tìm ghi ở đây` : Nó sẽ tìm coi thằng nội dung đó có ko 
+
+* 'echo "Hello world"' '| grep' `world` : Nó sẽ in ra thằng Hello world và nó tìm thằng world
+
+* 'cat' `file name` `file name` '| grep' `nội dung muốn tìm ghi ở đây`: Đây là cách tìm nhiều file 
+
+[Docs grep](https://viblo.asia/p/tim-hieu-ve-lenh-grep-trong-linux-DZrGNNDdGVB)
+
+### Lệnh cp 
+#### Đây là lệnh copy file
+
+* 'cp' `file cũ` `tên file mới muốn copy từ file cũ qua` : nó sẽ copy file cũ tạo ra file mới tên file tùy
+
+* 'cp' `file cũ` `tên file mới muốn copy từ file cũ qua`/`tên file mới muốn copy từ file cũ qua` : Đây là copy file cũ qua file mới và copy vào thằng children
+
+* 'cp -r' `folder cũ` `tên folder mới muốn copy từ file cũ qua` : Đây là copy folder cũ qua folder mới 
+
+#### nếu muốn copy vào quyền root
+
+* 'sudo cp' `demo.html` `/home/` : nó đã copy py vào root nhưng nó sẽ hỏi mk khi copy vào 
+
+### Lệnh mv
+#### Lệnh di chuyển (move)
+
+* 'mv' `têm file cũ` `tên file mới` : Nó sẽ đổi tên file cũ thành file mới 
+
+* 'mv' 'tên file cũ' `new-folder/` : Nó sẽ di chuyển thằng tên file cũ vào bên trong thằng new folder
+
+#### Còn nếu muốn di chuyển vào root dùng sudo
+'sudo mv' 'tên file cũ' `new-folder/` : Nó sẽ di chuyển thằng tên file cũ vào bên trong thằng new folder
+
+### Lệnh rm
+#### Lệnh dùng để xóa file (remove)
+#### Nó sẽ ko xóa được folder đang chứa file
+
+* 'rm' `file muốn xóa` : xóa file  
+
+* 'rm' `file muốn xóa` `file muốn xóa` : Có thể xóa 2 file cùng 1 lúc
+
+#### Còn muốn xóa thì nó sẽ xóa file trong folder và còn lại folder lớn và bên trong ko có gì ( muốn xóa folder dùng lệnh mrdir)
+
+* 'rm -r' `folder muốn xóa`: Nó sẽ xóa tất cả của folder đó và folder đó mất đi 
+
+#### Dùng sudo để xóa trong root
+
+* 'sudo rm' `/home/demo.html` : xóa đi folder trong root
+
+### Lệnh rmdir 
+#### Xóa folder 
+
+* 'rmdir' `tên folder muốn xóa` : xóa đi folder
+
+### Lệnh sudo 
+> 1. Viết tắt của superuser do, sudo là một trong những lệnh Linux cơ bản phổ biến nhất cho phép bạn thực hiện các tác vụ yêu cầu quyền quản trị hoặc quyền root.
+> 2. Khi sử dụng sudo, hệ thống sẽ nhắc người dùng xác thực bằng mật khẩu. Sau đó, hệ thống Linux sẽ ghi nhật ký dấu thời gian dưới dạng trình theo dõi. Theo mặc định, mọi người dùng root có thể chạy các lệnh sudo trong 15 phút/phiên.
+> 3. Nếu bạn cố chạy sudo trong dòng lệnh mà không tự xác thực, thì hệ thống sẽ ghi nhật ký hoạt động dưới dạng sự kiện bảo mật.
+
+---
+
+## lệnh chmod
+### How to Change File and Folder Permissions
+#### Có thể dùng lệnh 'ls-l' : Để coi tất cả những ký tự bên dưới
+Chúng tôi sẽ sử dụng lệnh chmod để thay đổi quyền đối với tệp và thư mục trong Linux. Nhưng trước tiên, bạn cần lưu ý rằng có ba loại người dùng có thể tương tác với một tệp:
+** Owner ** — the user who creates and owns a file or folder.
+** Group ** — all users who are members of the same group.
+** Others ** — all other users on the system who are neither the owner nor members of a group.
+
+** -rwxrw-rw- ** — phần này của dòng biểu thị quyền của tệp. Để hiểu rõ hơn, chúng ta phải chia nó thành bốn nhóm: (–), (rwx), (rw-) và (rw-).
+
+> Nhóm đầu tiên cho biết loại tệp. Ví dụ của chúng tôi hiển thị dấu gạch nối, đại diện cho một tệp thông thường. Nếu chúng tôi đang kiểm tra một thư mục, dấu gạch nối sẽ được thay thế bằng d.
+
+> Ba ký tự sau loại tệp thể hiện quyền đối với tệp của chủ sở hữu. Trong ví dụ này, chúng ta có thể thấy rằng chủ sở hữu có thể đọc (r), ghi (w) và thực thi (x) tệp.
+
+> Ba ký tự tiếp theo là quyền đối với tệp của nhóm. Chúng ta có thể kết luận rằng nhóm có thể đọc (r) và viết (w), nhưng không thể thực thi tệp. Điều này là do ký tự cuối cùng là dấu gạch nối thay vì chữ x.
+
+> Nhóm cuối cùng là quyền đối với tệp của người khác. Dựa trên ví dụ của chúng tôi, loại người dùng này không thể thực thi tệp, nhưng họ được phép đọc và ghi.
+
+**  1 – the number of hard links. A hard link is an additional name for an existing file.
+**  user user – the owner and group owner of the file.
+** 0 – the size of the file in bytes.
+**  Jan 19 12:59 – the last modification date.
+** myfile.txt – the name of the file/folder.
+
+* Chmod là một lệnh phổ biến sửa đổi quyền đọc, ghi và thực thi của tệp hoặc thư mục. Trong Linux, mỗi tệp được liên kết với ba lớp người dùng – chủ sở hữu, thành viên nhóm và những người khác.
+
+Đây là cú pháp cơ bản:
+```ts
+** chmod [option] [permission] [file_name] **
+    Chmod [tùy chọn] [quyền] [tên_tệp]
+```
+
+Ví dụ: chủ sở hữu hiện là người duy nhất có toàn quyền thay đổi note.txt. Để cho phép các thành viên nhóm và những người khác đọc, viết và thực thi tệp, hãy thay đổi nó thành loại quyền -rwxrwxrwx, có giá trị số là 777:
+
+* Chmod 777 note.txt
+
+Lệnh này hỗ trợ nhiều tùy chọn, bao gồm:
+
+-c hoặc –changes hiển thị thông tin khi thay đổi được thực hiện.
+-f hoặc –silent chặn các thông báo lỗi.
+-v hoặc –verbose hiển thị chẩn đoán cho từng tệp được xử lý.
+
+[Docs Chorms](https://www.hostinger.com/tutorials/vps/change-linux-permissions-and-owners)
+
+##### Phân quyền bằng ký tự 
+**Example other xóa đi quyền write chỉ được read**
+<CustomImage src="https://raw.githubusercontent.com/asdiop159752/BlogPost/master/images/chmod.png" alt="Warning: chmod" />
+
+**Example phân quyền cho owner group others **
+<CustomImage src="https://raw.githubusercontent.com/asdiop159752/BlogPost/master/images/Permissions-for-user-own-other-chmod.png" alt="Warning: Permissions-for-user-own-other-chmod" />
+
+#### phân quyền bằng hệ số bát phân
+### How to Use chmod Command
+Giả sử ai đó trong nhóm đang gặp lỗi bash: permission reject và chúng ta muốn thay đổi quyền đối với tệp Linux từ -rwxrw-rw- thành -rwx-r–r–. Chỉ cần nhập dòng này:
+```ts 
+chmod 744 [file name]
+```
+Bằng cách thực hiện lệnh này, chủ sở hữu có thể đọc, ghi và thực thi tệp (rwx). Tuy nhiên, nhóm và những người khác chỉ được phép đọc (r–).
+
+Tại thời điểm này, bạn có thể thắc mắc tại sao chúng tôi lại sử dụng số có ba chữ số (744) sau lệnh chmod.
+
+Số xác định quyền truy cập tệp. Đọc, viết và thực thi được biểu thị bằng một giá trị số:
+
+r (read) – 4
+w (write) – 2
+x (execute) – 1
+Vì vậy, nếu bạn muốn cấp tất cả các quyền (rwx) cho người dùng, chúng ta cần thêm quyền đọc (4), ghi (2) và thực thi (1). Do đó, rwx bằng 7.
+
+Trong khi đó, vì nhóm và những người khác chỉ được phép đọc tệp nên chúng tôi cung cấp cho họ 4.
+
+Hãy nhớ rằng quyền của chủ sở hữu luôn được đặt trước, sau đó mới đến nhóm và những người khác. Đó là lý do tại sao chúng tôi nhập 744.
+
+Nếu bạn không muốn cấp bất kỳ quyền nào cho người dùng, hãy nhập 0 vào vị trí tương ứng.
+
+** Example phân quyền bằng số ký tự 754 là owner-(read,write,execute)-group-(read-execute) others(read)  **
+<CustomImage src="https://raw.githubusercontent.com/asdiop159752/BlogPost/master/images/Permissions-744.png" alt="Warning: Permissions-744" />
+
+[Docs Chorms](https://www.hostinger.com/tutorials/vps/change-linux-permissions-and-owners)
+
+### How to use sudo
+> Sử dung sudo cho hợp lý khi nào phải là root thì mới chạy được vd: chmod hoặc tải cấc file ở trên mạng mà người ta kêu dùng sudo để execute mà trong file có viut gây hại cho hệ thống mà tin người ta tải về rồi sudo sẽ bị làm hại nên trước khi tải nên xem xét lệnh đó có cần sudo ko ( nếu nó hiện permission denied là mình ko có quyền phải truy cập vào root thì mới dùng sudo để thêm quyền read write execute còn ko thì có dùng ở tài khoản bình thường và ko dùng root nữa)
+<CustomImage src="https://raw.githubusercontent.com/asdiop159752/BlogPost/master/images/chmod-sudo.png" alt="Warning: chmod-sudo " />
+
+---
+
+### lệnh chown
+#### change own thay đổi chủ sở hữu 
+
+<CustomImage src="https://raw.githubusercontent.com/asdiop159752/BlogPost/master/images/chown.png" alt="Warning: chown " />
+
+<CustomImage src="https://raw.githubusercontent.com/asdiop159752/BlogPost/master/images/chown-all.png" alt="Warning: chown-all " />
+
+### Các lệnh làm việc với người dùng/nhóm trong Ubuntu:
+
+[Các lệnh làm việc với người dùng/nhóm trong Ubuntu:](https://linuxapt.com/blog/161-find-out-which-groups-a-user-belongs-to-in-ubuntu-20-04)
+
+
