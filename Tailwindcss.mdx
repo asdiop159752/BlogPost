@@ -1,0 +1,39 @@
+---
+title: 'Tailwindcss sử dụng nhiều'
+date: '2023-05-18'
+tags: ['next.js','nextjs','new']
+---
+
+```ts 
+//HTMl
+    <span class="ct-bage-circle bg-orange-400 text-white">10</span>
+//CSS
+.ct-bage-circle{
+    @apply text-xs text-center rounded-full px-1.5;
+}
+```
+<CustomImage src="https://raw.githubusercontent.com/asdiop159752/BlogPost/master/images/bage-cricle.png" alt="Warning: bage-cricle" />
+
+Muốn sử dụng ** justify-center ** phải keeys hợp với **flex**
+
+ left-1/2 -translate-x-1/2 Khi dung position muon canh giua
+
+Để hover vào 1 div lớn div con va animate hiện ra thì sử dụng group
+ 1. Sử dụng group vào thằng class div cha 
+ 2. Sau đó thêm ** hidden ** và ** group:hover**  vào class div1 thằng con 
+ 3. group-hover:animate-fadeIn Đây là khi hover vào thằng cha và con có animate
+
+flex row --------------------- ngang
+flex-col dọc
+ |
+ |
+ |
+ |
+ |
+ |
+ |
+ |
+ |
+ |
+ Muốn sử dụng gap-5 
+ Phải sử dụng flex-col hoặc flex-row để có thể sử dụng gap nếu row thì nó gap ngang nếu row-col nó sẽ gap dọc 
