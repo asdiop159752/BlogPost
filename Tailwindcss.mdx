@@ -4,6 +4,7 @@ date: '2023-05-18'
 tags: ['next.js','nextjs','new']
 ---
 
+### Dùng nhiều 
 ```ts 
 //HTMl
     <span class="ct-bage-circle bg-orange-400 text-white">10</span>
@@ -14,15 +15,21 @@ tags: ['next.js','nextjs','new']
 ```
 <CustomImage src="https://raw.githubusercontent.com/asdiop159752/BlogPost/master/images/bage-cricle.png" alt="Warning: bage-cricle" />
 
-Muốn sử dụng ** justify-center ** phải keeys hợp với **flex**
+### justify-center + items-center + flex
+Muốn sử dụng ** justify-center ** phải kết hợp với items-center + **flex** ==> 1 combo
+
+### Fix canh position nằm giữa
+Muốn sử dụng 
 
  left-1/2 -translate-x-1/2 Khi dung position muon canh giua
 
+### Hover block
 Để hover vào 1 div lớn div con va animate hiện ra thì sử dụng group
  1. Sử dụng group vào thằng class div cha 
  2. Sau đó thêm ** hidden ** và ** group:hover**  vào class div1 thằng con 
  3. group-hover:animate-fadeIn Đây là khi hover vào thằng cha và con có animate
 
+### Hướng Flex
 flex row --------------------- ngang
 flex-col dọc
  |
@@ -35,5 +42,11 @@ flex-col dọc
  |
  |
  |
- Muốn sử dụng gap-5 
- Phải sử dụng flex-col hoặc flex-row để có thể sử dụng gap nếu row thì nó gap ngang nếu row-col nó sẽ gap dọc 
+### Flex
+Muốn sử dụng gap-5 flex-row and flex-col và bắt vuộc phải có ** flex **
+Phải sử dụng flex-col hoặc flex-row để có thể sử dụng gap nếu row thì nó gap ngang nếu row-col nó sẽ gap dọc  
+
+### Grid
+ Muốn sử dụng gap-5 trong grid thì bắt buộc phải có ** grid ** và kết hợp grid-row-1 hoặc grid-cols-1 và grid-rows-1 
+ - ** 1 ** ở đây là thẳng 1 hoặc là ngang 1 .... Hoặc thẳng 2 ngang 2 'Có trong bài coffee-style tailwindcss'
+Phải sử dụng flex-col hoặc flex-row để có thể sử dụng gap nếu row thì nó gap ngang nếu row-col nó sẽ gap dọc 
