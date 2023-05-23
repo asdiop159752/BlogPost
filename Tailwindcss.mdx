@@ -4,7 +4,7 @@ date: '2023-05-18'
 tags: ['next.js','nextjs','new']
 ---
 
-### Dùng nhiều 
+## Dùng nhiều 
 ```ts 
 //HTMl
     <span class="ct-bage-circle bg-orange-400 text-white">10</span>
@@ -15,6 +15,12 @@ tags: ['next.js','nextjs','new']
 ```
 <CustomImage src="https://raw.githubusercontent.com/asdiop159752/BlogPost/master/images/bage-cricle.png" alt="Warning: bage-cricle" />
 
+## Hover block
+Để hover vào 1 div lớn div con va animate hiện ra thì sử dụng group
+ 1. Sử dụng group vào thằng class div cha 
+ 2. Sau đó thêm ** hidden ** và ** group:hover**  vào class div1 thằng con 
+ 3. group-hover:animate-fadeIn Đây là khi hover vào thằng cha và con có animate
+
 ### justify-center + items-center + flex
 Muốn sử dụng ** justify-center ** phải kết hợp với items-center + **flex** ==> 1 combo
 
@@ -22,25 +28,11 @@ Muốn sử dụng ** justify-center ** phải kết hợp với items-center + 
 Muốn sử dụng 
  left-1/2 -translate-x-1/2 Khi dung position muon canh giua
 
-### Hover block
-Để hover vào 1 div lớn div con va animate hiện ra thì sử dụng group
- 1. Sử dụng group vào thằng class div cha 
- 2. Sau đó thêm ** hidden ** và ** group:hover**  vào class div1 thằng con 
- 3. group-hover:animate-fadeIn Đây là khi hover vào thằng cha và con có animate
+
 
 ### Hướng Flex
 flex row --------------------- ngang
-flex-col dọc
- |
- |
- |
- |
- |
- |
- |
- |
- |
- |
+flex-col dọc||||||||||
 ### Flex
 Muốn sử dụng gap-5 flex-row and flex-col và bắt vuộc phải có ** flex **
 Phải sử dụng flex-col hoặc flex-row để có thể sử dụng gap nếu row thì nó gap ngang nếu row-col nó sẽ gap dọc  
@@ -83,4 +75,5 @@ grid-cols-4 thì khi màn hình nhỏ cho nó thẳng xuống grid-cols-2 -> opt
 <CustomImage src="https://raw.githubusercontent.com/asdiop159752/BlogPost/master/images/grid-col.png" alt="Warning: grid-col" />
 
 
-
+### sự kết hợp của text-center và text left
+Khi responsive mặc định nó là text-left nếu về màn hình nhỏ để text-center mà màn hình lớn muốn như cũ thì ghi từ md:text-left là từ màn hình md chữ nó sẽ về như cũ .
