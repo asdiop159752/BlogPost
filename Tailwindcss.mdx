@@ -25,10 +25,8 @@ tags: ['next.js','nextjs','new']
 Muốn sử dụng ** justify-center ** phải kết hợp với items-center + **flex** ==> 1 combo
 
 ### Fix canh position nằm giữa
-Muốn sử dụng 
- left-1/2 -translate-x-1/2 Khi dung position muon canh giua
-
-
+Muốn sử dụng position và relative nhưng nó bị lệch thì cách fix :
+left-1/2 -translate-x-1/2 Khi dung position muon canh giua
 
 ### Hướng Flex
 flex row --------------------- ngang
@@ -56,22 +54,22 @@ className={clsx(`form-input`)}
 
 ### Sự kết hợp của responsive
 
-flex-row thì khi màn hình nhỏ nên flex-col -> option
+` flex-row thì khi màn hình nhỏ nên flex-col -> option `
 <CustomImage src="https://raw.githubusercontent.com/asdiop159752/BlogPost/master/images/flex-row.png" alt="Warning: flex-row" />
 
-flex-row
+` flex-row `
 
 <CustomImage src="https://raw.githubusercontent.com/asdiop159752/BlogPost/master/images/flex-col.png" alt="Warning: flex-col" />
 
-flex-col
+` flex-col `
 
 
-grid-row-4 thì khi màn hình nhỏ cho nó thẳng xuống grid-rows-2 -> option
+` grid-row-4 thì khi màn hình nhỏ cho nó thẳng xuống grid-rows-2 -> option `
 <CustomImage src="https://raw.githubusercontent.com/asdiop159752/BlogPost/master/images/grid-rows.png" alt="Warning: grid-rows" />
 
 
 
-grid-cols-4 thì khi màn hình nhỏ cho nó thẳng xuống grid-cols-2 -> option
+` grid-cols-4 thì khi màn hình nhỏ cho nó thẳng xuống grid-cols-2 -> option `
 <CustomImage src="https://raw.githubusercontent.com/asdiop159752/BlogPost/master/images/grid-col.png" alt="Warning: grid-col" />
 
 
