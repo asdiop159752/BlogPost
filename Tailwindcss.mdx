@@ -49,3 +49,38 @@ Phải sử dụng flex-col hoặc flex-row để có thể sử dụng gap nế
  Muốn sử dụng gap-5 trong grid thì bắt buộc phải có ** grid ** và kết hợp grid-row-1 hoặc grid-cols-1 và grid-rows-1 
  - ** 1 ** ở đây là thẳng 1 hoặc là ngang 1 .... Hoặc thẳng 2 ngang 2 'Có trong bài coffee-style tailwindcss'
 Phải sử dụng flex-col hoặc flex-row để có thể sử dụng gap nếu row thì nó gap ngang nếu row-col nó sẽ gap dọc 
+
+### Thêm thư viện 'clsx' vào bên trong tailwindcss
+` Khi thêm clsx vào nó sẽ giúp tạo nhanh và có thể kết hợp chung với tailwind css chúng t cần phải cofig`
+<CustomImage src="https://raw.githubusercontent.com/asdiop159752/BlogPost/master/images/config-tailwindcss.png" alt="Warning: config-tailwindcss" />
+
+```ts
+className={clsx(`form-input`)}
+```
+
+<CustomImage src="https://raw.githubusercontent.com/asdiop159752/BlogPost/master/images/form-input-clsx.png" alt="Warning:form-input-clsx" />
+
+<CustomImage src="https://raw.githubusercontent.com/asdiop159752/BlogPost/master/images/form-input-in-clsx.png" alt="Warning:form-input-in-clsx" />
+
+### Sự kết hợp của responsive
+
+flex-row thì khi màn hình nhỏ nên flex-col -> option
+<CustomImage src="https://raw.githubusercontent.com/asdiop159752/BlogPost/master/images/flex-row.png" alt="Warning: flex-row" />
+
+flex-row
+
+<CustomImage src="https://raw.githubusercontent.com/asdiop159752/BlogPost/master/images/flex-col.png" alt="Warning: flex-col" />
+
+flex-col
+
+
+grid-row-4 thì khi màn hình nhỏ cho nó thẳng xuống grid-rows-2 -> option
+<CustomImage src="https://raw.githubusercontent.com/asdiop159752/BlogPost/master/images/grid-rows.png" alt="Warning: grid-rows" />
+
+
+
+grid-cols-4 thì khi màn hình nhỏ cho nó thẳng xuống grid-cols-2 -> option
+<CustomImage src="https://raw.githubusercontent.com/asdiop159752/BlogPost/master/images/grid-col.png" alt="Warning: grid-col" />
+
+
+
