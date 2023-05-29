@@ -1,11 +1,141 @@
 ---
 title: 'Git and Github'
-date: '2023-05-18'
+date: '2023-05-26'
 tags: ['next.js','nextjs','new']
 ---
-
-# Git 
+# Diffirent Git and  Github
+## Git 
 Git là một công cụ được sử dụng rộng rãi, được biết đến như một ** hệ thống kiểm soát phiên bản ** .\
 
-# Github
+## Github
 Đây là một dịch vụ lưu trữ trực tuyến mà bạn có thể sử dụng để ** lưu trữ kho kiểm soát ** phiên bản của mình (tất cả các tệp và thư mục bạn cần để theo dõi dự án).
+
+# Đây là làm git dùng cá nhân
+## Khi code 1 cái mới nên đổi branch như bên dưới 
+### Step1 Câu lệnh code đổi branch (Dùng để kí hiệu vd như branch này làm việc header và đổi branch kia làm  việc main ... )
+không nên để trong master and main
+Chúng ta cần câu lệnh này để đổi sang branch khác để dùng 
+`Tất của bài trong phần này đều dùng chung ** lab1 ** là branch`
+```ts 
+`-b là tạo và nhảy sang branch đó lun`
+git checkout -b lab1
+```
+
+### Step2 rồi sau đó dùng git add tất cả file vào
+```ts
+git add .
+```
+
+### Step3 git commit lần đầu tiên thì xài có - m
+```ts
+git commit -m "[#1] lab1"
+``` 
+
+### Step4 check xem đã có chưa
+```ts
+git remote -v
+```
+
+### Step5 Rồi sau đó push lên git vào branch ** origin ở đây là do mình git remote add origin mà có ** lab 1 là tên branch còn origin có thể check ở git remote -v
+```ts
+git push origin lab1
+```
+### Step6 Cách để xóa branch 
+
+```ts 
+git branch -D lab1
+```
+
+## Đây là khi đã Pull lên rồi và muốn chỉnh sửa( pull thì pull thẳng trên git) và đây là cách lần thứ 2 push code
+
+### Step1
+
+```ts
+git add .
+```
+
+### Step2 (ko cần -m nữa thay vào đó là câu lệnh --amend)
+
+```ts
+git commit --amend
+```
+
+### Step3 và sau đó 
+
+:wq (Ý nghĩa là write và quite)
+
+### Step4 Và nếu sau đó push cùng branch thì nên thêm -f ở cuối
+
+```ts
+git push origin lab1 -f
+```
+
+## Và sau khi đã làm xong ở branch mới preview lại và merge về branch master và sau merge xong thì delete lun đi 
+
+## và nếu muốn quay trở lại branch master thì dùng lệnh 
+
+```ts
+git checkout master
+```
+
+## Sau khi checkout về branch master code sẽ mất chúng ta sẽ dùng câu lệnh dưới để kéo code về branch master
+
+```ts 
+git pull origin master
+```
+### Khi mà làm xong 1 branch nào về master thì chúng ta nên xóa brand cũ đi đỡ phải chứa rác 
+
+```ts
+git branch -D lab1
+```
+### và chúng ta có thể check xem chúng ta đang ở đâu
+```ts
+git branch
+```
+
+## Chúng ta có thẻ xem nảy giờ chúng ta đã làm gì bằng lệnh dưới (n5 là 5 dòng cuối)
+```ts
+git log --oneline -n5
+```
+
+## Khi chúng ta xóa nhầm branch thì chúng ta dùng lệnh đưới để xem 
+```ts
+git reflog --no-abbrev
+```
+# Đây là git dùng công ty
+
+### Giả sử công ty sẽ gửi 1 git và bắt chúng ta làm về thì chúng ta làm bước dưới 
+> Chúng ta Fork nó về cá nhân của mình
+> Sau đó clone về máy 
+
+### Giống cá nhân nhưng có điểm khác là khi remote
+
+```ts
+` Giải thích là xuantruong: có thể dặt tên công ty(option) và phía sau thì chúng ta copy ssh và ném vào `
+git remote add xuantruong git@github.com:xuantruong/github-for-work.git
+```
+### Và có thể check là coi nó đã có remote mới chưa 
+
+```ts
+git remote -v
+```
+
+## Và luu ý khi push chúng ta sẽ có 2 remote thì chúng ta sẽ đổi thành remove mới (origin ko xài) có thể chek remote bằng lệnh phía trên
+```ts
+` xuantruong là tên remote ta tạo ở trên  và lab1 là branch`
+git push xuantruong lab1
+```
+## Khi chúng ta pull nó sẽ khác 
+```ts
+ ` Chúng ta sẽ phải pull về công ty xuantruong là tên remote ta tạo ở trên master và branch chính`
+ git pull xuantruong master
+```
+## Nó chỉ khác 3 bước đối với cá nhân 
+> Bước 1 : Chúng t Fork nó về và clone về máy
+> Bước 2 : Chúng ta đổi remote và khi push cũng push ở remote mới 
+> Bước 3 : Khi pull chúng ta sẽ không được merge và khi công ty đã merge thì mình pull về branch default
+
+# Lưu ý (nếu gặp lỗi gì xem sơ này và làm lại)
+<CustomImage src="https://raw.githubusercontent.com/asdiop159752/BlogPost/master/images/Step-branch-git.png" alt="Warning: Step-branch-git" />
+
+<Video id="swlrBlriFPE" />
